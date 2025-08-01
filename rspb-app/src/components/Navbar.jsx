@@ -31,6 +31,7 @@ const user = {
   name: 'Iqbal Fakboi',
   email: '11221034@student.itk.ac.id',
   image: '/iqbal.jpg',
+  role: 'user',
 };
 
 const tabs = [
@@ -76,16 +77,26 @@ export function HeaderTabs() {
                 className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
               >
                 <Group gap={7}>
-                  <Avatar src={user.image} alt={user.name} radius="xl" size={20} />
-                  <Text fw={500} size="sm" lh={1} mr={3}>
-                    {user.name}
-                  </Text>
+                  <Avatar src={user.image} alt={user.name} radius="xl" size={28} />
+                  <div style={{ lineHeight: 1 }}>
+                    <Text fw={500} size="sm">
+                        {user.name}
+                    </Text>
+                    <Text size="xs" c="dimmed">
+                        {user.role === 'admin' ? 'Admin' : 'User'}
+                    </Text>
+                  </div>
                   <IconChevronDown size={12} stroke={1.5} />
                 </Group>
               </UnstyledButton>
             </Menu.Target>
             <Menu.Dropdown>
               <Menu.Item
+                leftSection={<IconStar size={16} color={theme.colors.yellow[6]} stroke={1.5} />}
+              >
+                History
+              </Menu.Item>
+              {/* <Menu.Item
                 leftSection={<IconHeart size={16} color={theme.colors.red[6]} stroke={1.5} />}
               >
                 Liked posts
@@ -99,7 +110,7 @@ export function HeaderTabs() {
                 leftSection={<IconMessage size={16} color={theme.colors.blue[6]} stroke={1.5} />}
               >
                 Your comments
-              </Menu.Item>
+              </Menu.Item> */}
 
               <Menu.Label>Settings</Menu.Label>
               <Menu.Item leftSection={<IconSettings size={16} stroke={1.5} />}>
@@ -113,9 +124,9 @@ export function HeaderTabs() {
               <Menu.Divider />
 
               <Menu.Label>Danger zone</Menu.Label>
-              <Menu.Item leftSection={<IconPlayerPause size={16} stroke={1.5} />}>
+              {/* <Menu.Item leftSection={<IconPlayerPause size={16} stroke={1.5} />}>
                 Pause subscription
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item color="red" leftSection={<IconTrash size={16} stroke={1.5} />}>
                 Delete account
               </Menu.Item>

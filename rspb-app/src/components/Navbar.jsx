@@ -1,5 +1,5 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation"; // ✅
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   Avatar,
@@ -38,7 +38,7 @@ const tabs = [
   { label: "Layanan", path: "/layanan" },
   { label: "Our Doctors", path: "/doctors" },
   { label: "Daftar Online", path: "/Daftar" },
-  { label: "History", path: "/history" },
+  { label: "History", path: "/History" },
   { label: "Check Status", path: "/check-status" },
   { label: "FAQ", path: "/faq" },
 ];

@@ -36,10 +36,10 @@ const tabs = [
   { label: "Home", path: "/" },
   { label: "Profile", path: "/profile" },
   { label: "Layanan", path: "/layanan" },
-  { label: "Our Doctors", path: "/doctors" },
+  { label: "Our Doctors", path: "/Doctor" },
   { label: "Daftar Online", path: "/Daftar" },
   { label: "History", path: "/History" },
-  { label: "Check Status", path: "/check-status" },
+  { label: "Check Status", path: "/Status" },
   { label: "FAQ", path: "/faq" },
 ];
 
